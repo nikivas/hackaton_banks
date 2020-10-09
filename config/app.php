@@ -162,9 +162,15 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
+
         /*
          * Package Service Providers...
          */
+//        \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+//
+//        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
          * Application Service Providers...
