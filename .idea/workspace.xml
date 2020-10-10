@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b48cbb7-700e-449d-990f-d48a08eaaf78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/dashboardStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/card1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/card2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/foto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/sams.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/scer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/vtb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/xiaomi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/zz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SendMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Card.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock" beforeDir="false" afterPath="$PROJECT_DIR$/laradock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock/mysql/my.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/laradock/mysql/my.cnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,6 +185,13 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\VTB\WebApi\public\img" />
+      <recent name="D:\VTB\WebApi\public\js" />
+      <recent name="D:\VTB\WebApi\public\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -184,7 +208,7 @@
       <updated>1602259621446</updated>
       <workItem from="1602259622480" duration="8262000" />
       <workItem from="1602268193619" duration="7130000" />
-      <workItem from="1602317771328" duration="1720000" />
+      <workItem from="1602317771328" duration="17628000" />
     </task>
     <servers />
   </component>
@@ -192,6 +216,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="685" y="64" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602324862957">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="64" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602324862957" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602266870789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -200,10 +228,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="736" y="432" key="ComposerInitDialogKey/0.0.1920.1040@0.0.1920.1040" timestamp="1602263854308" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602266255688">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602331435526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602266255688" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602331435526" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1602265958186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

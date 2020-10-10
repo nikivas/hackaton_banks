@@ -28,7 +28,9 @@ class CreateNewUser implements CreatesNewUsers
 
         $pass = $this->generateRandomPass(6);
 
+//        dd($input['name']);
         $user = User::create([
+            'name' => $input['name'],
             'phone' => $input['phone'],
             'email' => $input['email'],
             'password' => Hash::make($pass),

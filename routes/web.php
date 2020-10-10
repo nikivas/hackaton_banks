@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\CardController;
+use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\MainPage;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserInfoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +22,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [MainPage::class, 'homePage'])->name('dashboard');
+
+Route::resource('cards', CardController::class);
+
+Route::get('/home',[MainPage::class, 'homePage']);
+
+Route::get('/userCards', [UserInfoController::class, 'getCards']);
+
+Route::resource('devices', DeviceController::class);
+
+Route::resource('transactions', TransactionController::class);

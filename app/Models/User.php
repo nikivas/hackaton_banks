@@ -18,12 +18,18 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    public const USER_STATUSES = [
+        'Active'=>1,
+        'Blocked'=>2,
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
+        'name',
         'phone',
         'email',
         'password',
@@ -68,4 +74,10 @@ class User extends Authenticatable
     {
         return 'phone';
     }
+
+    public function cards()
+    {
+        return $this->hasMany('App\Models\Card');
+    }
+
 }

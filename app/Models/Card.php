@@ -16,4 +16,9 @@ class Card extends Model
         'money',
         'user_id',
     ];
+
+    public function transactions()
+    {
+        return $this->hasMany('App\Models\Transaction', 'source_id');
+    }
 }
