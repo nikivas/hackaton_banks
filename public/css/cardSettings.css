@@ -34,3 +34,12 @@
 #higher{
 	margin-bottom: 20px;
 }
+
+.button-with-border-in-settings {
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.margined-row {
+    margin-bottom: 2em;
+}

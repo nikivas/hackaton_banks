@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2b48cbb7-700e-449d-990f-d48a08eaaf78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserHistory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserHistory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock" beforeDir="false" afterPath="$PROJECT_DIR$/laradock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laradock/mysql/my.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/laradock/mysql/my.cnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/cardSettings.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/cardSettings.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cardSettings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cardSettings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +196,7 @@
       <updated>1602259621446</updated>
       <workItem from="1602259622480" duration="8262000" />
       <workItem from="1602268193619" duration="7130000" />
-      <workItem from="1602317771328" duration="23487000" />
+      <workItem from="1602317771328" duration="27365000" />
     </task>
     <servers />
   </component>
