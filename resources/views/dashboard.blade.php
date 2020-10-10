@@ -44,8 +44,8 @@
                            href="#list-profile" role="tab" aria-controls="profile">История операций</a>
                         <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
                            href="#list-messages" role="tab" aria-controls="messages">Мои устройства</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                           href="#list-settings" role="tab" aria-controls="settings">Выполнить перевод</a>
+{{--                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"--}}
+{{--                           href="#list-settings" role="tab" aria-controls="settings">Выполнить перевод</a>--}}
                     </div>
                 </div>
                 <div class="col-8">

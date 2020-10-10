@@ -120,6 +120,36 @@
                         </div>
 
 
+                        <div class="card card-body">
+
+                            <h5>Время выполнения транзакции</h5>
+                            <br>
+                            <hr>
+
+
+                            <div class="form-group row">
+                                <label for="lowerT" class="col-sm-2 col-form-label">от</label>
+                                <div class="col-2">
+                                    <input  type="number" class="form-control" id="lowerT" placeholder="ч" data-placement="top" min="0" step="1">
+                                </div>
+
+                                <div class="col-2">
+                                    <input  type="number" class="form-control" id="" placeholder="м" data-placement="top" min="0" max="59" step="1">
+                                </div>
+
+                                <label for="higherT" class="col-sm-2 col-form-label">до</label>
+                                <div class="col-2">
+                                    <input  type="number" class="form-control" id="higherT" placeholder="ч" data-placement="top"  min="0" max="100" step="1">
+                                </div>
+
+                                <div class="col-2">
+                                    <input  type="number" class="form-control" id="lowerT" placeholder="м" data-placement="top"  min="0" max="59" step="1">
+                                </div>
+
+                            </div>
+                        </div>
+
+
                     </div>
 
                     <div class="form-group form-check" data-toggle="tooltip" title="Требуется использование веб-камеры">
@@ -132,6 +162,36 @@
                     <div class="collapse" id="videoCol">
 
 
+                        <div class="card card-body">
+
+                            <h5>Сумма транзакции</h5>
+                            <br>
+                            <hr>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input type="range" min="10" max="10000000" value="10" class="slider" id="lower" data-placement="top" oninput="lowerF()">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input type="range" min="1000" max="10000000" value="50000" class="slider" id="higher" data-placement="top" oninput="higherF()">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="lowerNum" class="col-sm-2 col-form-label">от</label>
+                                <div class="col-4">
+                                    <input  type="number" class="form-control" id="lowerNum" placeholder="в рублях" data-placement="top" oninput="lowerSl()" >
+                                </div>
+                                <label for="higherNum" class="col-sm-2 col-form-label">до</label>
+                                <div class="col-4">
+                                    <input  type="number" class="form-control" id="higherNum" placeholder="в рублях" data-placement="top" oninput="higherF()" >
+
+                                </div>
+                            </div>
+
+                        </div>
 
                         <div class="card card-body">
 
