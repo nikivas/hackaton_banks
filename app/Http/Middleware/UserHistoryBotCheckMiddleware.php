@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\User;
+use App\Models\UserHistory;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,8 @@ class UserHistoryBotCheckMiddleware
         if (is_null($user)) {
             return $next($request);
         }
-        if (){
+        $user = User::findOrFail(Auth()::id());
+        if (!UserHistory::checkUser($user)){
             $user['status'] = User::USER_STATUSES['Blocked'];
             $user->save();
         }
