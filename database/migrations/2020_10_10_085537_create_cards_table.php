@@ -21,6 +21,8 @@ class CreateCardsTable extends Migration
             $table->integer('csv');
             $table->date('expired');
             $table->float('money');
+            $table->boolean('is_voice')->default(true);
+            $table->boolean('is_video')->default(false);
         });
     }
 

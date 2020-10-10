@@ -13,7 +13,7 @@ class TransactionController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -29,6 +29,40 @@ class TransactionController extends Controller
                     $sourceCard = $card;
                 }
             }
+        }
+        if (is_null($sourceCard)) {
+            return redirect('/home');
+        }
+        if ($sourceCard['is_voice']) {
+            return view('voiceProcess', [
+                'user' => $user,
+                'money'=>$fields['money'],
+                'source_id'=>$fields['source_id'],
+                'target_number'=>$fields['target_number'],
+            ]);
+
+        } else {
+            return $this->saveToDB($request);
+        }
+    }
+
+    public function saveToDB(Request $request)
+    {
+        $user = User::findOrFail(Auth()->id());
+        $isValid = false;
+        $fields = $request->all();
+        $cards = $user->cards()->get();
+        $sourceCard = null;
+        foreach ($cards as $card) {
+            if ($card['id'] == $fields['source_id']) {
+                if ($card['money'] >= $fields['money']) {
+                    $isValid = true;
+                    $sourceCard = $card;
+                }
+            }
+        }
+        if (is_null($sourceCard)) {
+            return redirect('/home');
         }
 
         if (isset($fields['target_id'])) {
@@ -59,6 +93,11 @@ class TransactionController extends Controller
         $transaction['status'] = 'danger';
         $transaction->save();
         return redirect('/home');
+    }
+
+    public function checkAudio(Request $request)
+    {
+        return response(null, 200);
     }
 
     /**

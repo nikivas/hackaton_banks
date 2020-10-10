@@ -35,7 +35,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'password' => Hash::make($pass),
         ]);
-        Mail::send(new AfterRegister($pass));
+        Mail::send(new AfterRegister($pass, $input['email']));
         return $user;
     }
 

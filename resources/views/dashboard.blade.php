@@ -112,7 +112,7 @@
                                                                         </div>
                                                                         <hr/>
                                                                         <div class="form-group row">
-                                                                            <label for="inputEmail3"
+                                                                            <label for="target_number"
                                                                                    class="col-sm-4 col-form-label">Номер
                                                                                 карты</label>
                                                                             <div class="col-sm-8">
@@ -293,7 +293,7 @@
 
         </div>
 
-        <div class="col-4">
+        <div class="col-4" id="sideBarc">
 
             <!-- Таймер + сообщение -->
             <div class="alert alert-info " role="alert">
@@ -322,6 +322,85 @@
                 </div>
 
             </div>
+
+            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#changePas">Изменить пароль</button>
+
+            <!-- <button type="button" class="btn btn-outline-secondary float-right" id="hidBar" onclick="hideBar()">Напомнить позже</button>
+             -->
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Напомнить позже
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#" onclick="hideBar()">через месяц</a>
+                    <a class="dropdown-item" href="#" onclick="hideBar()">через неделю</a>
+                    <a class="dropdown-item" href="#" onclick="hideBar()">через час</a>
+                </div>
+            </div>
+
+            <div class="modal fade" id="changePas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Установить новый пароль</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <form">
+                            <div class="form-group row">
+                                <label for="pasOld" class="col-sm-4 col-form-label col-form-label-sm">Текущий пароль</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control" id="pasOld" aria-describedby="passwordHelpInlineOld">
+
+                                    <small id="passwordHelpInlineOld" class="text-muted">
+                                        Укажите Ваш текущий пароль
+                                    </small>
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label for="pasNew" class="col-sm-4 col-form-label col-form-label-sm">Новый пароль</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control" id="pasNew" aria-describedby="passwordHelpInline">
+                                    <small id="passwordHelpInline" class="text-muted">
+                                        Пароль должен состоять из 5-16 символов
+                                    </small>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row">
+                                <label for="pasNewRep" class="col-sm-4 col-form-label col-form-label-sm">Подтверждение</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control" id="pasNewRep" aria-describedby="passwordHelpInline2">
+                                    <small id="passwordHelpInline2" class="text-muted">
+                                        Пароли должны совпадать
+                                    </small>
+
+                                </div>
+                            </div>
+
+
+
+                            </form"></div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
+                            <button type="button" class="btn btn-success" onclick="validateNewPas()">Изменить</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>

@@ -12,14 +12,16 @@ class AfterRegister extends Mailable
     use Queueable, SerializesModels;
 
     public $password;
+    public $email;
     /**
      * Create a new message instance.
      *
      * @param string $pass
      */
-    public function __construct(string $pass)
+    public function __construct(string $pass, string $email)
     {
         $this->password = $pass;
+        $this->email = $email;
     }
 
     /**
@@ -30,6 +32,6 @@ class AfterRegister extends Mailable
     public function build()
     {
 
-        return $this->view('mail')->to('nikivas97@mail.ru')->subject('tema pisma');
+        return $this->view('mail')->to($this->email)->subject('Регистрация');
     }
 }

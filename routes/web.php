@@ -34,6 +34,8 @@ Route::get('/userCards', [UserInfoController::class, 'getCards']);
 Route::resource('devices', DeviceController::class);
 
 Route::resource('transactions', TransactionController::class);
+Route::post('/transactions/withoutChecks', [TransactionController::class, 'saveToDB']);
+Route::post('/checkAudio', [TransactionController::class, 'checkAudio']);
 
 Route::get('card/{id}/settings',[CardSettingsController::class, 'getSettings']);
 
