@@ -36,3 +36,5 @@ Route::resource('devices', DeviceController::class);
 Route::resource('transactions', TransactionController::class);
 
 Route::get('card/{id}/settings',[CardSettingsController::class, 'getSettings']);
+
+Route::get('/transaction/{id}/danger',[TransactionController::class,'dangerStatus']);

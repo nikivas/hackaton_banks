@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->timestamps();
             $table->bigInteger('source_id');
             $table->bigInteger('target_id');
+            $table->string('status')->nullable()->default('ok');
             $table->float('money');
         });
     }

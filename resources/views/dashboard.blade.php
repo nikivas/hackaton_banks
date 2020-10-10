@@ -67,7 +67,8 @@
                                                                 type="button" id="menu1" data-toggle="dropdown"
                                                                 aria-haspopup="true" aria-expanded="false"></button>
                                                         <div class="dropdown-menu" aria-labelledby="menu1">
-                                                            <a class="dropdown-item" href="/card/{{$card['id']}}/settings">Политика
+                                                            <a class="dropdown-item"
+                                                               href="/card/{{$card['id']}}/settings">Политика
                                                                 безопасности</a>
                                                             <a class="dropdown-item" data-toggle="modal"
                                                                data-target="#exampleModal"> Выполнить перевод </a>
@@ -174,7 +175,12 @@
                                         </div>
 
                                         <div class="col-2">
-                                            <a href="#" class="badge badge-danger">Это не я</a>
+                                            @if (is_null($transaction['status']) || $transaction['status'] == 'ok')
+                                            <a href="/transaction/{{$transaction['id']}}/danger" class="badge badge-secondary">Обман</a>
+                                            @else
+                                            <a href="#" class="badge badge-danger">Обман</a>
+                                                <span class="badge badge-warning">Заявка обрабатывается</span>
+                                            @endif
                                         </div>
                                     </div>
                                 @endforeach
