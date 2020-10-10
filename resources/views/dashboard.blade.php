@@ -67,7 +67,7 @@
                                                                 type="button" id="menu1" data-toggle="dropdown"
                                                                 aria-haspopup="true" aria-expanded="false"></button>
                                                         <div class="dropdown-menu" aria-labelledby="menu1">
-                                                            <a class="dropdown-item" href="bez/InfBez.html">Политика
+                                                            <a class="dropdown-item" href="/card/{{$card['id']}}/settings">Политика
                                                                 безопасности</a>
                                                             <a class="dropdown-item" data-toggle="modal"
                                                                data-target="#exampleModal"> Выполнить перевод </a>

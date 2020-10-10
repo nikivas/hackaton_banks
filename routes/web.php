@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\CardSettingsController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\MainPage;
 use App\Http\Controllers\TransactionController;
@@ -33,3 +34,5 @@ Route::get('/userCards', [UserInfoController::class, 'getCards']);
 Route::resource('devices', DeviceController::class);
 
 Route::resource('transactions', TransactionController::class);
+
+Route::get('card/{id}/settings',[CardSettingsController::class, 'getSettings']);

@@ -1,0 +1,36 @@
+﻿.btn-outline-secondary{
+	border-width: 0px;
+}
+
+
+.slider {
+	-webkit-appearance: none;
+	width: 90%;
+	height: 10%;
+	position: absolute;
+	background: #a4a4a4;
+	outline: none;
+	border-width: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background: #584361;
+	cursor: pointer;
+	border-radius: 15px;
+	pointer-events: all;
+	position: relative;
+	z-index: 1;
+	outline: 0;
+}
+
+.slider input[type=range]::-moz-focus-outer {
+	border: 0;
+}
+
+#higher{
+	margin-bottom: 20px;
+}
