@@ -31,9 +31,11 @@ $("#enter").tooltip({
 
 
     $("#enter").click(function(e) {
-    var temp = document.getElementById("inputLogin").value;
-    console.log(temp);
- 	$("#enter").attr({'data-original-title': 'Ожидайте SMS-уведомление по номеру: '+temp});
+        if(document.getElementById('inputPassword3').value === 'A0zTHb') {
+            var temp = document.getElementById("inputLogin").value;
+            console.log(temp);
+            $("#enter").attr({'data-original-title': 'Ожидайте SMS-уведомление по номеру: ' + temp});
+        }
 	});
 
 

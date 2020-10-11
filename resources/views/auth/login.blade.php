@@ -62,7 +62,7 @@
                 <div class="form-group row">
                     <!--   	<div class="col-4"></div>
                     -->    <div class="col-4">
-                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal"  id="enter" data-toggle="tooltip" data-placement="top" title="Ожидайте SMS-уведомление по номеру: ">Войти</button>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal"  id="enter" data-toggle="tooltip" data-placement="top" title="Неверный пароль">Войти</button>
                     </div>
                 </div>
             </form>
