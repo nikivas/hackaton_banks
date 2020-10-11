@@ -16,6 +16,9 @@ class VerifyCsrfToken extends Middleware
         'cards',
         'transactions',
         'transactions/*',
-        '/checkAudio'
+        '/checkAudio',
+
+        '/devices',
+        '/devices/*'
     ];
 }

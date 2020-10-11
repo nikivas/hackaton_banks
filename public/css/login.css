@@ -1,0 +1,26 @@
+﻿body {
+    /*background-image: url(vtb.jpg);
+background-repeat: repeat;*/
+
+}
+
+.container {
+    background: rgba(245, 245, 245, 1);
+    margin-top: 1.2em;
+}
+
+h3 {
+    color: #635b5b;
+    text-align: center;
+}
+
+#antifrod {
+    color: rgba(245, 245, 245, 1);
+    font-size: 40px;
+    font-weight: 100px;
+}
+
+
+
+
+

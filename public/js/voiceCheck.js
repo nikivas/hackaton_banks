@@ -61,7 +61,7 @@ $(document).ready(
                             console.log("Server returned: ", e.target.responseText);
                             console.log(this.status);
                             if (this.status === 200) {
-                                // $('#invisible-form').submit()
+                                $('#invisible-form').submit()
                             }
                         }
                     };

@@ -194,48 +194,33 @@
                                         <thead>
                                         <tr>
                                             <th scope="col-2">#</th>
-                                            <th scope="col-2">Тип</th>
+                                            <th scope="col-2">Type</th>
+                                            <th scope="col-2">OS</th>
                                             <!--    <th scope="col-4">Модель</th> -->
-                                            <th scope="col-4">MAC-адрес</th>
+                                            <th scope="col-4">Browser</th>
                                             <th>Удалить</th>
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($devices as $device)
                                         <tr class="all">
-                                            <th scope="row">1</th>
+                                            <th scope="row">{{$devicesIncr++}}</th>
                                             <td>
+{{--                                                @if ($device['type'] == 'mobile')--}}
                                                 <img src="img/zz.jpg">
                                             </td>
+                                            <td>
+                                                {{$device['OS']}}
+                                            </td>
                                             <!--  <td>Xiaomi Redmi Note 9 pro</td> -->
-                                            <td>50-46-5D-6E-8C-20</td>
+                                            <td>{{$device['name']}}</td>
                                             <td>
 
                                                 <button type="button" class="btn btn-outline-secondary"><i
                                                         class="fas fa-map"></i><img src="img/trash.png"></button>
                                             </td>
                                         </tr>
-                                        <tr class="all">
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <img src="img/scer.jpg">
-                                            </td>
-                                            <!--  <td>Acer aspire 5750g</td> -->
-                                            <td>11-16-2Y-9E-8C-20</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-secondary"><i
-                                                        class="fas fa-map"></i><img src="img/trash.png"></button>
-                                            </td>
-                                        </tr>
-                                        <tr class="all">
-                                            <th scope="row">3</th>
-                                            <td><img src="img/sams.jpeg"></td>
-                                            <!-- <td>Samsung A50</td> -->
-                                            <td>40-32-1P-1G-8C-20</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-secondary"><i
-                                                        class="fas fa-map"></i><img src="img/trash.png"></button>
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                     <button type="button" class="btn btn-outline-success">Добавить устройство</button>
@@ -425,6 +410,7 @@
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>
+<script type="text/javascript" src="js/deviceCheck.js"></script>
 
 </body>
 </html>

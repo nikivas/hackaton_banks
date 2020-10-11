@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Device;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -31,11 +32,28 @@ class MainPage extends Controller
             $cardsSearcher[$card['id']] = $card;
         }
 
+        $devices = Device::where('user_id', '=', $user['id'])->get();
+        $originalDevices = [];
+        foreach ($devices as $device) {
+            $contains = false;
+            foreach ($originalDevices as $originalDevice) {
+                if ($originalDevice['OS'] == $device['OS'] && $originalDevice['name'] == $device['name']) {
+                    $contains = true;
+                }
+            }
+
+            if (!$contains) {
+                $originalDevices[] = $device;
+            }
+        }
+
         return view('dashboard', [
             'user' => $user,
             'cards' => $userCards,
             'transactions' => $userTransactions,
             'cardSearcher' => $cardsSearcher,
+            'devices' => $originalDevices,
+            'devicesIncr' => 1,
         ]);
     }
 }

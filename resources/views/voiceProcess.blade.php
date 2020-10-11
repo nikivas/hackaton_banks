@@ -118,10 +118,22 @@
 
             </div>
             <div class="row" style="align-content: center; text-align: center">
-                <div class="cssload-container">
-                    <ul class="cssload-loader">
-                        <li></li><li></li><li></li><li></li><li></li><li></li>
-                    </ul>
+                <div class="windows8 fuckingLoader">
+                    <div class="wBall" id="wBall_1">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_2">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_3">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_4">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_5">
+                        <div class="wInnerBall"></div>
+                    </div>
                 </div>
             </div>
 
