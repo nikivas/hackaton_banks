@@ -64,9 +64,9 @@
 </form>
 <div class="container">
 
-    <div class="row justify-content-start">
+{{--    <div class="row justify-content-start">
 
-        <div class="col-8">
+        <div class="col-8">--}}
 
             <div class="row">
                 <div class="col-12">
@@ -83,10 +83,10 @@
                 <div class="col-3">
 
                 </div>
-                <div class="col-9">
+                <div class="col-6">
                     <div class="row" style="text-align: center">
                         <h2 style="width: 100%">
-                        Произнесите, пожалуйста, фразу:
+                        Произнесите, пожалуйста, фразу
                         </h2>
                     </div>
                     <div class="row" style="text-align: center">
@@ -104,20 +104,22 @@
             <div class="row"><br></div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-5">
 
                 </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" id="spoke">
+                <div class="col-2">
+                    <button class="btn btn-primary btn-lg" id="spoke">
                         Произнести
                     </button>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
 
                 </div>
 
             </div>
             <div class="row" style="align-content: center; text-align: center">
+                <br><br><br><br><br><br><br><br>
+
                 <div class="windows8 fuckingLoader">
                     <div class="wBall" id="wBall_1">
                         <div class="wInnerBall"></div>

@@ -13,13 +13,13 @@ var filename = new Date().toISOString();
 
 $(document).ready(
     function () {
-        $('#fuckingLoader').css("visibility", "hidden");
+        $('.fuckingLoader').css("visibility", "hidden");
         $('#spoke').click(function () {
             var constraints = {
                 audio: true,
                 video: false
             }
-            $('#fuckingLoader').css("visibility", "visible");
+            $('.fuckingLoader').css("visibility", "visible");
 
             navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
                 console.log("getUserMedia() success, stream created, initializing Recorder.js ...");
@@ -43,7 +43,7 @@ $(document).ready(
 
             //autostop
             setTimeout(function () {
-                $('#fuckingLoader').css("visibility", "hidden");
+                $('.fuckingLoader').css("visibility", "hidden");
                 console.log("stopButton clicked");
                 // stopButton.disabled = true;
                 // recordButton.disabled = false;
